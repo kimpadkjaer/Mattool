@@ -1,0 +1,647 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <a id="C0"></a>
+    <div class="py-5" style="background-image: url(../static/bg02.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>{{ mat1_show.title }}</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-1 print-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><a href="{{ url_for('mat1') }}">Tilbage til MAT1 | Oversigten</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% for error in form.errors %}
+      <script type="text/javascript">
+$(function() {
+    $('#add_elev').modal('show');
+})
+</script>
+    {% endfor %}
+
+    {% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+    <div class="py2" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 bg-succes rounded">
+          <p class="lead text-center">{{ message }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+    {% if elev_antal >= 1 %}
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" style="">
+               <h1 class="">{{ mat1_show.title }}</h1>
+          <p class="lead">Oprettet {{ mat1_show.created_on.strftime("%d/%m/%Y") }}<br>Klasse: {{ mat1_show.klasse }}<br>Antal elever: {{ elev_antal }}<br>Bemærkninger:<br> {{ mat1_show.beskrivelse }}</p>
+              </div>
+
+        <div class="col-md-6 rounded ">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_elev">Tilføj elev til prøven</button>
+ <button type="button" class="btn btn-primary" onclick="window.print();return false;">Print prøven</button>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#slet_test">Slet prøven</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="page-break"></div>
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="">Oversigt</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="thead-dark header-color-green">
+
+                <tr class="text-center">
+                  <th>Elevens navn</th>
+                  <th>A1</th>
+                  <th>B1</th>
+                  <th>B2</th>
+                  <th>C1</th>
+                  <th>D1</th>
+                  <th>D2</th>
+                  <th>D3</th>
+                  <th>D4</th>
+                  <th>E1</th>
+                  <th>Antal rigtige</th>
+                  <th>C værdi</th>
+                  <th>Bemærkning</th>
+                  <th id="slet">Slet</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                   {% for elev in c_score %}
+                <tr class="text-center">
+               <td>{{ elev.elev }}</td>
+                {% if elev.a1 <= 19 %} <td class="test-color-red">{{ elev.a1 }}</td> {% elif elev.a1 <=22 %} <td class="test-color-yellow">{{ elev.a1 }}</td>  {% else %} <td>{{ elev.a1 }}</td> {% endif %}
+                {% if elev.b1 <= 17 %} <td class="test-color-red">{{ elev.b1 }}</td> {% elif elev.b1 <=20 %} <td class="test-color-yellow">{{ elev.b1 }}</td>  {% else %} <td>{{ elev.b1 }}</td> {% endif %}
+                {% if elev.b2 <= 11 %} <td class="test-color-red">{{ elev.b2 }}</td> {% elif elev.b2 <=18 %} <td class="test-color-yellow">{{ elev.b2 }}</td> {% else %} <td>{{ elev.b2 }}</td> {% endif %}
+                {% if elev.c1 <= 4 %} <td class="test-color-red">{{ elev.c1 }}</td> {% elif elev.c1 <=6 %}  <td class="test-color-yellow">{{ elev.c1 }}</td> {% else %} <td>{{ elev.c1 }}</td> {% endif %}
+                {% if elev.d1 <= 3 %} <td class="test-color-red">{{ elev.d1 }}</td> {% elif elev.d1 == 3 %} <td class="test-color-yellow">{{ elev.d1 }}</td> {% else %} <td>{{ elev.d1 }}</td> {% endif %}
+                {% if elev.d2 <= 1 %} <td class="test-color-red">{{ elev.d2 }}</td> {% elif elev.d2 == 2 %} <td class="test-color-yellow">{{ elev.d2 }}</td> {% else %} <td>{{ elev.d2 }}</td> {% endif %}
+                {% if elev.d3 <= 2 %} <td class="test-color-red">{{ elev.d3 }}</td> {% elif elev.d3 == 3 %} <td class="test-color-yellow">{{ elev.d3 }}</td> {% else %} <td>{{ elev.d3 }}</td> {% endif %}
+                {% if elev.d4 <= 5 %} <td class="test-color-red">{{ elev.d4 }}</td> {% elif elev.d4 == 6 %} <td class="test-color-yellow">{{ elev.d4 }}</td> {% else %} <td>{{ elev.d4 }}</td> {% endif %}
+                {% if elev.e1 <= 3 %} <td class="test-color-red">{{ elev.e1 }}</td> {% elif elev.e1 == 4 %} <td class="test-color-yellow">{{ elev.e1 }}</td> {% else %} <td>{{ elev.e1 }}</td> {% endif %}
+                <td>{{ elev.sum }}</td>
+                <td>{{ elev.csum }}</td>
+                <td>{{ elev.comments }}</td>
+                <td id="slet"><form action="{{ url_for('mat1_delete_elev', mat1tests_id = elev.id) }}" method="POST">
+        <input type="submit" value="Slet" class="btn btn-primary" onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;">
+        </form></td>
+                </tr>
+                 {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="page-break"></div>
+  <div class="py-3" style="">
+    <div class="container">
+      <div class="row" style="">
+        <div class="col-md-12" style="">
+          <h4 class="">Diagram</h4>
+           <script src='../static/Chart.min.js'></script>
+<canvas id="chart" width="795" height="500"></canvas>
+        <script>
+   // bar chart data
+   var barData = {
+   labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+   datasets : [
+      {
+            fillColor: "rgba(165,124,101,0.2)",
+            strokeColor: "rgba(165,124,101,1)",
+            pointColor: "rgba(165,124,101,1)",
+         data : [{% for item in values %}
+                      {{item}},
+                    {% endfor %}]
+      }
+      ]
+   }
+
+   // get bar chart canvas
+   var mychart = document.getElementById("chart").getContext("2d");
+
+   steps = 15
+   max = 15
+   // draw bar chart
+   new Chart(mychart).Bar(barData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+
+</script>
+        </div>
+            </div>
+    </div>
+  </div>
+  <div class="page-break"></div>
+          <div class="py-3" style="">
+    <div class="container">
+      <div class="row" style="">
+
+           <div class="col-md-12">
+          <h4>C-niveauer</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="header-color-green">
+                <tr class="text-center">
+                  <th>C-niveauer</th>
+                  <th>Antal</th>
+                  <th>Elever</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <th>C9/10</th>
+                  <td>{{ c_nine_value }}</td>
+                  <td>{% for elever in c_level_nine %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C8</th>
+                  <td>{{ c_eight_value }}</td>
+                  <td>{% for elever in c_level_eight %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C7</th>
+                  <td>{{ c_seven_value }}</td>
+                  <td>{% for elever in c_level_seven %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C6</th>
+                  <td>{{ c_six_value }}</td>
+                  <td>{% for elever in c_level_six %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C5</th>
+                  <td>{{ c_five_value }}</td>
+                  <td>{% for elever in c_level_five %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C4</th>
+                  <td>{{ c_four_value }}</td>
+                  <td>{% for elever in c_level_four %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C3</th>
+                  <td>{{ c_three_value }}</td>
+                  <td>{% for elever in c_level_three %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C2</th>
+                  <td>{{ c_two_value }}</td>
+                  <td>{% for elever in c_level_two %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C1</th>
+                  <td>{{ c_one_value }}</td>
+                  <td>{% for elever in c_level_one %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>C0</th>
+                  <td>{{ c_null_value }}</td>
+                  <td>{% for elever in c_level_null %} {{ elever.elev }}, {% endfor %}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="page-break"></div>
+  <div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="">Opmærksomhedspunkter</h4>
+          <p class="lead">Gul = Usikkert indlært ( o )<br>Rød = Ikke indlært ( - )</p>
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark header-color-green">
+                <tr class="text-center">
+                  <th></th>
+                  <th>A1</th>
+                  <th>B1</th>
+                  <th>B2</th>
+                  <th>C1</th>
+                  <th>D1</th>
+                  <th>D2</th>
+                  <th>D3</th>
+                  <th>D4</th>
+                  <th>E1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <th class="test-color-yellow">o</th>
+                  <td>{% for elever in a1_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in b1_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in b2_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in c1_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d1_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d2_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d3_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d4_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in e1_yellow %} {{ elever.elev}}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th class="test-color-red">-</th>
+                  <td>{% for elever in a1_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in b1_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in b2_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in c1_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d1_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d2_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d3_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in d4_red %} {{ elever.elev}}, {% endfor %}</td>
+                  <td>{% for elever in e1_red %} {{ elever.elev}}, {% endfor %}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>Samlet antal</th>
+                  <td>{{ a1_red_yellow_sum }}</td>
+                  <td>{{ b1_red_yellow_sum }}</td>
+                  <td>{{ b2_red_yellow_sum }}</td>
+                  <td>{{ c1_red_yellow_sum }}</td>
+                  <td>{{ d1_red_yellow_sum }}</td>
+                  <td>{{ d2_red_yellow_sum }}</td>
+                  <td>{{ d3_red_yellow_sum }}</td>
+                  <td>{{ d4_red_yellow_sum }}</td>
+                  <td>{{ e1_red_yellow_sum }}</td>
+                </tr>
+                <tr class="text-center">
+                  <th>Procent</th>
+                  <td>{{ "%.0f"|format(a1_procent) }}%</td>
+                  <td>{{ "%.0f"|format(b1_procent) }}%</td>
+                  <td>{{ "%.0f"|format(b2_procent) }}%</td>
+                  <td>{{ "%.0f"|format(c1_procent) }}%</td>
+                  <td>{{ "%.0f"|format(d1_procent) }}%</td>
+                  <td>{{ "%.0f"|format(d2_procent) }}%</td>
+                  <td>{{ "%.0f"|format(d3_procent) }}%</td>
+                  <td>{{ "%.0f"|format(d4_procent) }}%</td>
+                  <td>{{ "%.0f"|format(e1_procent) }}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">Det anbefales at du arbejder med:<br>
+          <p class="lead"><b>
+          {% if a1_procent >=30 %} A1 (Titalssystem), {% else %} {% endif %}
+          {% if b1_procent >=30 %} B1 (Addition), {% else %} {% endif %}
+          {% if b2_procent >=30 %} B2 (Subtraktion), {% else %} {% endif %}
+          {% if c1_procent >=30 %} C1 (Algebra), {% else %} {% endif %}
+          {% if d1_procent >=30 %} D1 (Geometriske egenskaber og sammenhænge), {% else %} {% endif %}
+          {% if d2_procent >=30 %} D2 (Geometrisk tegning), {% else %} {% endif %}
+          {% if d3_procent >=30 %} D3 (Placeringer og flytninger), {% else %} {% endif %}
+          {% if d4_procent >=30 %} D4 (Måling), {% else %} {% endif %}
+          {% if e1_procent >=30 %} E1 (Statistik), {% else %} {% endif %}
+          </b></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="py-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="paragraph text-right"><a href="#C0">Til toppen</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal print prøven -->
+<div class="modal fade" id="print_test" tabindex="-1" role="dialog" aria-labelledby="print_testLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h4 class="modal-title" id="print_testLabel">Print prøven</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Vær opmærksom på, at du også kan gemme prøven som PDF:<br><br>
+        Chrome:<br>
+        Trykke på knappen "skift" under "destinationer" i print-menuen. Her kan vælges "Gem som PDF".
+
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fortryd</button>
+        <button type="button" class="btn btn-primary" onclick="window.print();return false;">
+  Print
+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+             <!-- Modal Slet prøve -->
+<div class="modal fade" id="slet_test" tabindex="-1" role="dialog" aria-labelledby="slet_testLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h4 class="modal-title" id="slet_testLabel">Slet prøve</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Hvis du trykker "Ok, slet prøven" skal du være opmærksom på, at prøven bliver slettet for bestandigt.
+            Hverken prøven eller elevdata genskabes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fortryd</button>
+         <form action="{{ url_for('mat1_delete_test', mat1_id = mat1_show.id) }}" method="POST">
+        <input type="submit" class="btn btn-primary text-right" value="Ok, slet prøven" onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+             <!-- Modal : Tilføje elev -->
+        <div class="modal fade" id="add_elev" tabindex="-1" role="dialog" aria-labelledby="add_elevLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h4 class="modal-title" id="add_elev">Tilføj elev</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        <div class="modal-body ">
+          <div class="table-responsive">
+            <form action="" method="post" onsubmit="submit.disabled = true; return true;">
+              {{ form.hidden_tag() }}
+             <table class="tableform">
+              <thead class="thead-light">
+                <tr>
+                  <th>Elevens navn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ form.elev(class_="form-control") }} {% for error in form.elev.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="tableform">
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th>A1</th>
+                  <th>B1</th>
+                  <th>B2</th>
+                  <th>C1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td>{{ form.a1(class_="form-control", placeholder="0 - 29") }}
+                  {% for error in form.a1.errors %}
+                  <span style="color:#E05858;">{{ error }}</span>
+                  {% endfor %}</td>
+                  <td>{{ form.b1(class_="form-control", placeholder="0 - 23") }}
+                  {% for error in form.b1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                  <td>{{ form.b2(class_="form-control", placeholder="0 - 23") }}
+                  {% for error in form.b2.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                  <td>{{ form.c1(class_="form-control", placeholder="0 - 10") }}
+                  {% for error in form.c1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                </tr>
+              </tbody>
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th>D1</th>
+                  <th>D2</th>
+                  <th>D3</th>
+                  <th>D4 </th>
+                  <th>E5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                <td>{{ form.d1(class_="form-control", placeholder="0 - 6") }}
+                {% for error in form.d1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d2(class_="form-control", placeholder="0 - 5") }} {% for error in form.d2.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d3(class_="form-control", placeholder="0 - 6") }} {% for error in form.d3.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d4(class_="form-control", placeholder="0 - 10") }} {% for error in form.d4.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.e1(class_="form-control", placeholder="0 - 5") }} {% for error in form.e1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="tableform">
+              <thead class="thead-light">
+                <tr>
+                  <th>Bemærkninger</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ form.comments(class_="form-control", rows="5")|safe }}<br>{{ form.submit(class="btn btn-primary") }}</th>
+                </tr>
+              </tbody>
+            </table>
+            </form>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fortryd</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    {%  endif %}
+{% if elev_antal <= 0 %}
+       <div class="py2" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 bg-succes rounded">
+          <p class="lead text-center">Ingen elever er blevet tilføjet til denne prøve. Udfyld formen nedenfor for at tilføje den første elev.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+     <div class="py-3">
+    <div class="container">
+      <div class="row">
+          <a id="C1"></a>
+          <h4>Tilføj elev</h4><br>
+          <div class="col-md-12 bg-warning rounded" style="">
+          <div class="table-responsive">
+            <form action="" method="post" onsubmit="submit.disabled = true; return true;">
+              {{ form.hidden_tag() }}
+             <table class="tableform">
+              <thead class="thead-light">
+                <tr>
+                  <th>Elevens navn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ form.elev(class_="form-control") }} {% for error in form.elev.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="tableform">
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th>A1</th>
+                  <th>B1</th>
+                  <th>B2</th>
+                  <th>C1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td>{{ form.a1(class_="form-control", placeholder="0 - 29") }}
+                  {% for error in form.a1.errors %}
+                  <span style="color:#E05858;">{{ error }}</span>
+                  {% endfor %}</td>
+                  <td>{{ form.b1(class_="form-control", placeholder="0 - 23") }}
+                  {% for error in form.b1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                  <td>{{ form.b2(class_="form-control", placeholder="0 - 23") }}
+                  {% for error in form.b2.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                  <td>{{ form.c1(class_="form-control", placeholder="0 - 10") }}
+                  {% for error in form.c1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                </tr>
+              </tbody>
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th>D1</th>
+                  <th>D2</th>
+                  <th>D3</th>
+                  <th>D4 </th>
+                  <th>E5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                <td>{{ form.d1(class_="form-control", placeholder="0 - 6") }}
+                {% for error in form.d1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d2(class_="form-control", placeholder="0 - 5") }} {% for error in form.d2.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d3(class_="form-control", placeholder="0 - 6") }} {% for error in form.d3.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.d4(class_="form-control", placeholder="0 - 10") }} {% for error in form.d4.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                <td>{{ form.e1(class_="form-control", placeholder="0 - 5") }} {% for error in form.e1.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="tableform">
+              <thead class="thead-light">
+                <tr>
+                  <th>Bemærkninger</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ form.comments(class_="form-control", rows="5")|safe }}<br>{{ form.submit(class="btn btn-primary") }}</th>
+                </tr>
+              </tbody>
+            </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 entry">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="py-5" style="	background-image: url({{ random_bg }});	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>{{ current_user }}'s side</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="">
+          <h1 class="">Ændringer</h1>
+          <div class="col-md-12 bg-light rounded">
+            <div class="col-md-12 rounded" style="">
+
+              <form action="" method="post">
+                  {{ form.hidden_tag() }}
+                <br><p>
+            {{ form.email.label }}<br>
+            {{ form.email(class_="form-control", placeholder="Indtast din email adresse") }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.school.label }}<br>
+            {{ form.school(class_="form-control") }}
+            {% for error in form.school.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(class="btn btn-primary") }}</p><br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-center"><a href="{{ url_for('user', username=current_user.username) }}">Fortryd og returnér til din side</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

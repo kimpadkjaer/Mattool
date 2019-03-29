@@ -1,0 +1,41 @@
+@media print {
+
+    @page {
+        size: landscape
+    }
+
+    body {
+        margin: 0;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	    font-size: 1em;
+	    margin-top: 0.2cm;
+	    margin-right: 0.5cm;
+	    margin-bottom: 0.2cm;
+	    margin-left: 0.5cm
+
+
+    }
+
+    header, mark, a,  .btn , #baggrund, .dont_include, #slet, .footer, .navbar, form, iframe, .menu, .hero, .modal-body, .modal-content, .modal-dialog, .modal-footer, .modal-header, .modal, .py-3.bg-dark {
+        display: none;
+    }
+
+    h4 {
+        page-break-before: always;
+        break-before: always;
+    }
+    .page-break { display: block; page-break-before: always; }
+
+    .print-text:before {
+        content: "MAT | Rettværktøj @ mattool.pythonanywhere.com";
+        color: black !important;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1em;
+    }
+
+    thead.header-color-green {
+    background-color: #A0B084 !important;
+}
+
+
+}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<div class="tablebox">
+<table>
+    <tr>
+        <td>
+        <h1>Velkommen til MAT|retteværktøj</h1>
+        <p>{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}</p><br>
+        <p>Ny bruger? Er du endnu ikke oprettet som bruger kan du gøre det <a href="{{ url_for('register') }}">her</a>.</p>
+        <p>Er du interesseret i at vide mere om projektet kan du læse mere <a href="/">her</a>.</p>
+        <div class="form">
+        <h1>Log ind</h1>
+        <form action="" method="post" novalidate>
+            {{ l_form.hidden_tag() }}
+            <p>
+                {{ l_form.username.label }}<br>
+                {{ l_form.username(size=32, placeholder="Indtast brugernavn") }}<br>
+                 {% for error in l_form.username.errors %}
+                 <span style="color: #c00;">[{{ error }}]</span>
+                 {% endfor %}
+            </p>
+            <p>
+                {{ l_form.password.label }}<br>
+                {{ l_form.password(size=32, placeholder="Indtast password") }}<br>
+                {% for error in l_form.password.errors %}
+                <span style="color: #c00;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ l_form.remember_me() }} {{ l_form.remember_me.label }}</p>
+            <p>{{ l_form.submit() }}</p>
+        </form>
+        </div>
+       </td>
+    </tr>
+</table>
+<p>Har du glemt dit kodeord? <a href="/">Tryk her for at nulstille det</a>.</p>
+</div>
+
+{% endblock %}

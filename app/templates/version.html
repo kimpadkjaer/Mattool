@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <a id="C0"></a>
+     <div class="py-5" style="	background-image: url(../static/bg02.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>MAT | Versionsoplysninger</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Nuværende version:  <span style="color:#E05858;">Alpha 1.0</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="text-center"><b>Implementerede funktion</b></h1>
+          <p class="lead text-justify"><br><b>Generelt:</b><br>Oprettelse af bruger.<br>Ændringer af brugerprofil.<br>Brugernes egen side (Min side)<br>Kontaktside.<br>Versions- / funktionsoplysninger.<br><br><b>MAT prøver:</b><br>Oprettese af MAT1 prøver.<br>Oprettelse af elever til specifikke MAT1 prøver.<br>Slettelse af MAT1 prøver.<br>Slettelse af elever knyttet til specifikke MAT1 prøver.<br>Hindring af adgang til andre brugeres prøver og elever.<br>Print af prøver (ink. PDF udgv.)</p>
+        </div>
+        <div class="col-md-6">
+          <h1 class="text-center"><b>Implementerede funktion, der kræver ændringer</b></h1>
+          <p class="lead text-justify"><br><b>Generelt:</b><br>Strømling af design (særligt fonts og farver)<br><br><b>MAT prøver:</b><br>Print af prøver (Ringe printfunktion, skal opdateres)<br>Valideringsfejl (Både englesk og dansk fejlbesked) når der indtastes særlige typer (oprettelse af elev til specifik prøve)<br>Tekst på "Min side".<br>Tekst på forsiden.<br>Tilfældigt BG billede på diverse undersider<br>Mulig for at rette i tilføjede prøver.<br>Mulighed for at rette i elevers prøvedata.<br><br><br></p>
+          <h1 class="text-center"><b>Manglende funktion</b></h1>
+          <p class="lead text-justify" ><br><b>Generelt:</b><br>Nulstilling af password<br>Cookie alert (session logging)<br>Slet bruger.<br>Administrationsværktøj.<br><br><b>MAT prøver:</b><br>MAT2, 3, 4, 5, 6, 7 og 8<br>Tilknytning af elever til specifikke MAT2, 3, 4, 5, 6, 7 og 8 prøver.<br>Vejledning i brug af retteværktøjet.<br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="paragraph text-right"><a href="#C0">Til toppen</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-center">Kommentarer og andet kan sendes direkte til Kim Padkjær via Kontaktsiden (Se nedenfor)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="../static/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="../static/wireframe.css">
+  <link rel="stylesheet" media="print" href="../static/print.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="shortcut icon" href="../static/favicon_2.ico">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="../static/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="../static/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" style=""></script>
+
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow" style="">
+    <div class="container"> <a class="navbar-brand" href="{{ url_for('version') }}">MAT | Retteværktøj</a> <span style="color:#E05858;">Alpha v. 1.0</span>
+      <div class="collapse navbar-collapse" id="navbar10">
+        <ul class="navbar-nav ml-auto">
+        {% if current_user.is_anonymous %}
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Log ind</a></li>
+           {% else %}
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('user', username=current_user.username) }}">Min side</a></li>
+          <li class="nav-item dropdown" style=""> <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opret MAT prøve</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item text-center" href="{{ url_for('mat1') }}">MAT1</a><a class="dropdown-item text-center" href="#">MAT2</a><a class="dropdown-item text-center" href="#">MAT3</a><a class="dropdown-item text-center" href="#">MAT4<br></a><a class="dropdown-item text-center" href="#" contenteditable="true">MAT5<br></a><a class="dropdown-item text-center" href="#">MAT6<br></a><a class="dropdown-item text-center" href="#">MAT7<br></a><a class="dropdown-item text-center" href="#">MAT8<br></a></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log ud</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+    {% block content %}
+
+    {% endblock %}
+  <div class="py-3 bg-dark" >
+    <div class="footer">
+      <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-secondary">Udviklet af Kim Padkjær | padkjaer.net</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-right"><a href="{{ url_for('kontakt') }}">Kontakt</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>

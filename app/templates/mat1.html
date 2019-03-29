@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="py-5" style="	background-image: url(../static/bg02.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>MAT1 | Tilføj prøve</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+  <div class="py-3" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <p class="lead text-center">{{ message }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+    {% if mat1_tests|length >= 1 %}
+        <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-left">Mine Mat1 prøver:<br></p>
+           <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr class="text-center">
+                  <th>Prøvens navn</th>
+                  <th>Klasse</th>
+                  <th>Oprettet</th>
+                  <th>Bemærkninger</th>
+                  <th>Slet prøve</th>
+                </tr>
+              </thead>
+        {% for each_test in mat1_tests %}
+              <tbody>
+                <tr class="text-center">
+                  <th><a href="{{ url_for('mat1_test_show', id=each_test.id) }}">{{ each_test.title }}</th>
+                  <td>{{ each_test.klasse }}</td>
+                  <td>{{ each_test.created_on.strftime("%d/%m/%Y") }}</td>
+                  <td>{{ each_test.beskrivelse }}</td>
+                  <td> <form action="{{ url_for('mat1_delete_test', mat1_id = each_test.id) }}" method="POST"><input type="submit" value="Slet test" class="btn btn-primary"></form></td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+         <div class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div>
+            <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opret_test_modal">
+  Opret ny prøve
+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal Opret prøve -->
+<div class="modal fade" id="opret_test_modal" tabindex="-1" role="dialog" aria-labelledby="opret_test_modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h4 class="modal-title" id="opret_test_modal">Opret ny prøve</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+
+                      <form id="c_form-h" action="" method="post" onsubmit="submit.disabled = true; return true;">
+                {{ form.hidden_tag() }}
+
+                <div class="form-group row">
+                  <div class="col-12"><p>Prøvens navn:</p>
+                    {{ form.title(class_="form-control") }} </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-12"><p>Klasse:</p>
+                    {{ form.klasse(class_="form-control") }} </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-12"><p>Bemærkninger:</p>
+                    {{ form.beskrivelse(class_="form-control", rows="8")|safe }}</div>
+                </div>
+                {{ form.submit(class="btn btn-primary") }}
+                </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fortryd</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    {% else %}
+        <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-left">Opret ny prøve</h1>
+          <div class="col-md-12 bg-light rounded">
+            <div class="col-md-12 rounded" style="">
+
+              <form id="c_form-h" action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <br>
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label text-center">Prøvens navn</label>
+                  <div class="col-10">
+                    {{ form.title(class_="form-control") }} {% for error in form.title.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</div>
+                </div>
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label text-center">Klasse</label>
+                  <div class="col-10">
+                    {{ form.klasse(class_="form-control") }} {% for error in form.klasse.errors %}
+                <span style="color:#E05858;">{{ error }}</span>
+                {% endfor %}</div>
+                </div>
+                <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label text-center" contenteditable="true">Bemærk<br>ninger</label>
+                  <div class="col-10">
+                    {{ form.beskrivelse(class_="form-control", rows="8")|safe }}</div>
+                </div>
+                {{ form.submit(class="btn btn-primary", onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;") }}
+                </form>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    {% endif %}
+
+{% endblock %}

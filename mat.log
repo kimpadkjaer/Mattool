@@ -1,0 +1,449 @@
+2018-11-15 18:13:00,112 - app - INFO - MAT startup
+2018-11-15 18:13:44,668 - app - INFO - MAT startup
+2018-11-15 18:14:02,238 - app - INFO - MAT startup
+2018-11-15 18:14:08,568 - app - INFO - MAT startup
+2018-11-15 18:14:09,986 - app - INFO - MAT startup
+2018-11-15 18:15:10,210 - app - INFO - MAT startup
+2018-11-15 18:15:11,606 - app - INFO - MAT startup
+2018-11-15 18:17:00,221 - app - INFO - MAT startup
+2018-11-15 18:19:54,558 - app - INFO - MAT startup
+2018-11-15 18:20:07,859 - app - INFO - MAT startup
+2018-11-15 18:20:15,950 - app.routes - INFO - Testing
+2018-11-15 18:24:46,087 - app - INFO - MAT startup
+2018-11-15 18:24:48,656 - app - INFO - MAT startup
+2018-11-15 19:47:01,874 - app - INFO - MAT startup
+2018-11-15 19:47:56,233 - app - INFO - MAT startup
+2018-11-15 19:50:01,589 - app - INFO - MAT startup
+2018-11-15 19:51:01,067 - app - INFO - MAT startup
+2018-11-15 19:51:10,893 - app - INFO - MAT startup
+2018-11-15 19:51:11,907 - app - INFO - MAT startup
+2018-11-15 19:52:00,264 - app - INFO - MAT startup
+2018-11-15 19:52:03,506 - app.routes - WARNING - Kiki forsøger at logge ind, men fejler
+2018-11-15 19:52:32,441 - app - INFO - MAT startup
+2018-11-15 19:52:38,631 - app.routes - WARNING - Brugeren 'Kikikaikai' forsøger at logge ind, men fejler
+2018-11-15 19:52:55,789 - app.routes - WARNING - Brugeren 'Kim' forsøger at logge ind, men fejler
+2018-11-15 19:54:44,245 - app - INFO - MAT startup
+2018-11-15 19:55:46,209 - app - INFO - MAT startup
+2018-11-15 19:56:07,679 - app - INFO - MAT startup
+2018-11-15 20:11:30,786 - app - INFO - MAT startup
+2018-11-15 20:12:06,659 - app - INFO - MAT startup
+2018-11-15 20:13:35,824 - app - INFO - MAT startup
+2018-11-15 20:14:16,401 - app - INFO - MAT startup
+2018-11-15 20:14:45,162 - app - INFO - MAT startup
+2018-11-15 20:16:35,541 - app - INFO - MAT startup
+2018-11-15 20:17:51,322 - app - INFO - MAT startup
+2018-11-15 20:17:56,596 - app - INFO - MAT startup
+2018-11-15 20:20:06,465 - app - INFO - MAT startup
+2018-11-15 20:20:09,655 - app - INFO - MAT startup
+2018-11-15 20:21:52,703 - app - INFO - MAT startup
+2018-11-15 20:22:39,425 - app - INFO - MAT startup
+2018-11-15 20:22:39,425 - app - INFO - MAT startup
+2018-11-15 20:23:26,088 - app - INFO - MAT startup
+2018-11-15 20:26:37,408 - app - INFO - MAT startup
+2018-11-15 20:26:47,703 - app - INFO - MAT startup
+2018-11-15 20:28:56,295 - app - INFO - MAT startup
+2018-11-15 20:29:46,325 - app - INFO - MAT startup
+2018-11-15 20:30:26,287 - app - INFO - MAT startup
+2018-11-15 20:49:33,828 - app - INFO - MAT startup
+2018-11-15 20:51:21,344 - app - INFO - MAT startup
+2018-11-15 20:51:31,616 - app - INFO - MAT startup
+2018-11-15 20:53:22,565 - app - INFO - MAT startup
+2018-11-15 20:53:23,527 - app - INFO - MAT startup
+2018-11-15 20:53:54,247 - app - INFO - MAT startup
+2018-11-15 20:54:33,221 - app - INFO - MAT startup
+2018-11-15 20:57:44,392 - app - INFO - MAT startup
+2018-11-15 20:57:45,526 - app - INFO - MAT startup
+2018-11-15 21:04:26,807 - app - INFO - MAT startup
+2018-11-15 21:04:37,337 - app - INFO - MAT startup
+2018-11-15 21:07:21,714 - app - INFO - MAT startup
+2018-11-15 21:07:30,113 - app - INFO - MAT startup
+2018-11-15 21:10:21,310 - app - INFO - MAT startup
+2018-11-15 21:11:03,828 - app - INFO - MAT startup
+2018-11-17 06:43:34,085 - app - INFO - MAT startup
+2018-11-17 06:43:35,025 - app - INFO - MAT startup
+2018-11-17 07:07:25,395 - app - INFO - MAT startup
+2018-11-17 07:07:26,147 - app - INFO - MAT startup
+2018-11-17 07:12:27,435 - app - INFO - MAT startup
+2018-11-17 07:14:13,538 - app - INFO - MAT startup
+2018-11-17 07:14:23,762 - app - INFO - MAT startup
+2018-11-17 07:14:23,762 - app - INFO - MAT startup
+2018-11-17 07:15:22,715 - app - INFO - MAT startup
+2018-11-17 07:26:40,826 - app - INFO - MAT startup
+2018-11-17 07:30:03,029 - app - INFO - MAT startup
+2018-11-17 07:30:14,673 - app - INFO - MAT startup
+2018-11-17 07:32:12,695 - app - INFO - MAT startup
+2018-11-18 13:01:37,613 - app - INFO - MAT startup
+2018-11-18 13:01:39,085 - app - INFO - MAT startup
+2018-11-18 13:02:49,240 - app - INFO - MAT startup
+2018-11-18 13:02:53,193 - app - INFO - MAT startup
+2018-11-18 13:02:53,996 - app - INFO - MAT startup
+2018-11-18 13:03:47,807 - app - INFO - MAT startup
+2018-11-18 13:03:54,683 - app - INFO - MAT startup
+2018-11-18 13:03:55,517 - app - INFO - MAT startup
+2018-11-18 13:05:13,795 - app - INFO - MAT startup
+2018-11-18 13:05:17,496 - app - INFO - MAT startup
+2018-11-18 13:06:48,043 - app - INFO - MAT startup
+2018-11-18 13:07:00,857 - app - INFO - MAT startup
+2018-11-18 13:07:54,295 - app - INFO - MAT startup
+2018-11-18 13:08:31,414 - app - INFO - MAT startup
+2018-11-18 13:08:53,116 - app - INFO - MAT startup
+2018-11-18 13:09:28,984 - app - INFO - MAT startup
+2018-11-18 13:09:39,247 - app - INFO - MAT startup
+2018-11-18 13:10:35,028 - app - INFO - MAT startup
+2018-11-18 13:11:02,109 - app - INFO - MAT startup
+2018-11-18 13:11:15,387 - app - INFO - MAT startup
+2018-11-18 13:11:15,387 - app - INFO - MAT startup
+2018-11-18 13:11:29,513 - app - INFO - MAT startup
+2018-11-18 13:11:30,283 - app - INFO - MAT startup
+2018-11-18 13:11:56,159 - app - INFO - MAT startup
+2018-11-18 13:12:33,066 - app - INFO - MAT startup
+2018-11-18 13:14:21,779 - app - INFO - MAT startup
+2018-11-18 13:14:39,269 - app - INFO - MAT startup
+2018-11-18 13:14:39,269 - app - INFO - MAT startup
+2018-11-18 13:15:09,672 - app - INFO - MAT startup
+2018-11-18 13:15:14,457 - app - INFO - MAT startup
+2018-11-18 13:15:15,992 - app - INFO - MAT startup
+2018-11-18 13:16:42,112 - app - INFO - MAT startup
+2018-11-18 13:17:37,487 - app - INFO - MAT startup
+2018-11-18 13:17:41,220 - app - INFO - MAT startup
+2018-11-18 13:18:26,122 - app - INFO - MAT startup
+2018-11-18 13:19:01,473 - app - INFO - MAT startup
+2018-11-18 13:20:51,018 - app - INFO - MAT startup
+2018-11-18 13:21:00,837 - app - INFO - MAT startup
+2018-11-18 13:21:26,021 - app - INFO - MAT startup
+2018-11-18 13:22:13,663 - app - INFO - MAT startup
+2018-11-18 13:22:17,461 - app - INFO - MAT startup
+2018-11-18 13:22:19,056 - app - INFO - MAT startup
+2018-11-18 13:22:51,427 - app - INFO - MAT startup
+2018-11-18 13:23:06,605 - app - INFO - MAT startup
+2018-11-18 13:23:07,821 - app - INFO - MAT startup
+2018-11-18 13:23:30,489 - app - INFO - MAT startup
+2018-11-18 13:23:34,830 - app - INFO - MAT startup
+2018-11-18 13:23:36,268 - app - INFO - MAT startup
+2018-11-18 13:25:15,032 - app - INFO - MAT startup
+2018-11-18 13:25:54,597 - app - INFO - MAT startup
+2018-11-18 13:25:59,832 - app - INFO - MAT startup
+2018-11-18 13:26:00,600 - app - INFO - MAT startup
+2018-11-18 13:26:21,731 - app - INFO - MAT startup
+2018-11-18 13:26:22,579 - app - INFO - MAT startup
+2018-11-18 13:32:12,667 - app - INFO - MAT startup
+2018-11-18 14:40:34,769 - app - INFO - MAT startup
+2018-11-18 14:42:27,119 - app - INFO - MAT startup
+2018-11-18 14:42:41,375 - app - INFO - MAT startup
+2018-11-18 14:42:47,592 - app - INFO - MAT startup
+2018-11-18 14:42:57,027 - app - INFO - MAT startup
+2018-11-18 14:42:57,837 - app - INFO - MAT startup
+2018-11-18 14:45:17,613 - app - INFO - MAT startup
+2018-11-18 14:45:30,788 - app - INFO - MAT startup
+2018-11-18 14:45:31,760 - app - INFO - MAT startup
+2018-11-18 20:26:34,637 - app - INFO - MAT startup
+2018-11-18 20:27:03,380 - app - INFO - MAT startup
+2018-11-18 20:27:03,380 - app - INFO - MAT startup
+2018-11-18 20:27:44,477 - app - INFO - MAT startup
+2018-11-18 20:28:22,262 - app - INFO - MAT startup
+2018-11-18 20:34:07,236 - app - INFO - MAT startup
+2018-11-18 20:35:00,244 - app - INFO - MAT startup
+2018-11-19 12:16:11,243 - app - INFO - MAT startup
+2018-11-19 12:16:12,119 - app - INFO - MAT startup
+2018-11-19 12:18:48,026 - app - INFO - MAT startup
+2018-11-19 12:18:49,026 - app - INFO - MAT startup
+2018-11-19 12:19:15,273 - app - INFO - MAT startup
+2018-11-19 12:19:16,122 - app - INFO - MAT startup
+2018-11-19 12:19:29,051 - app - INFO - MAT startup
+2018-11-19 12:19:29,873 - app - INFO - MAT startup
+2018-11-19 13:41:26,830 - app - INFO - MAT startup
+2018-11-19 13:41:27,740 - app - INFO - MAT startup
+2018-11-21 18:24:28,939 - app - INFO - MAT startup
+2018-11-21 18:24:29,767 - app - INFO - MAT startup
+2018-11-21 18:24:35,220 - app - INFO - MAT startup
+2018-11-21 18:24:35,220 - app - INFO - MAT startup
+2018-11-21 18:25:28,184 - app - INFO - MAT startup
+2018-11-21 18:25:29,647 - app - INFO - MAT startup
+2018-11-21 18:26:28,972 - app - INFO - MAT startup
+2018-11-21 18:27:20,868 - app - INFO - MAT startup
+2018-11-21 18:27:22,411 - app - INFO - MAT startup
+2018-11-21 18:32:07,857 - app - INFO - MAT startup
+2018-11-21 18:35:23,137 - app - INFO - MAT startup
+2018-11-21 18:36:11,969 - app - INFO - MAT startup
+2018-11-21 18:36:20,866 - app - INFO - MAT startup
+2018-11-21 18:36:20,866 - app - INFO - MAT startup
+2018-11-21 18:36:52,584 - app - INFO - MAT startup
+2018-11-21 18:37:04,761 - app - INFO - MAT startup
+2018-11-21 18:39:55,375 - app - INFO - MAT startup
+2018-11-21 18:40:07,566 - app - INFO - MAT startup
+2018-11-21 18:52:01,518 - app - INFO - MAT startup
+2018-11-21 18:52:06,009 - app - INFO - MAT startup
+2018-11-21 19:41:40,206 - app - INFO - MAT startup
+2018-11-21 19:41:41,097 - app - INFO - MAT startup
+2018-11-21 19:44:20,598 - app - INFO - MAT startup
+2018-11-21 19:44:29,608 - app - INFO - MAT startup
+2018-11-21 19:44:36,313 - app - INFO - MAT startup
+2018-11-21 19:45:27,097 - app - INFO - MAT startup
+2018-11-21 19:45:38,920 - app - INFO - MAT startup
+2018-11-21 19:45:39,744 - app - INFO - MAT startup
+2018-11-21 19:46:00,920 - app - INFO - MAT startup
+2018-11-21 19:46:27,491 - app - INFO - MAT startup
+2018-11-21 19:46:31,873 - app - INFO - MAT startup
+2018-11-21 19:46:33,155 - app - INFO - MAT startup
+2018-11-21 19:47:14,474 - app - INFO - MAT startup
+2018-11-21 19:47:15,453 - app - INFO - MAT startup
+2018-11-21 19:47:20,400 - app.errors - WARNING - 404
+2018-11-21 19:47:54,673 - app - INFO - MAT startup
+2018-11-21 19:48:27,192 - app - INFO - MAT startup
+2018-11-21 19:48:28,753 - app - INFO - MAT startup
+2018-11-21 19:48:34,518 - app.errors - WARNING - 404
+2018-11-21 19:48:54,936 - app - INFO - MAT startup
+2018-11-21 19:50:40,126 - app.errors - WARNING - 404
+2018-11-21 19:51:24,860 - app - INFO - MAT startup
+2018-11-21 19:51:28,855 - app.errors - WARNING - 404
+2018-11-21 19:54:30,188 - app - INFO - MAT startup
+2018-11-21 19:54:52,267 - app - INFO - MAT startup
+2018-11-21 19:54:52,267 - app - INFO - MAT startup
+2018-11-21 19:55:21,677 - app - INFO - MAT startup
+2018-11-21 19:55:21,677 - app - INFO - MAT startup
+2018-11-21 19:55:21,677 - app - INFO - MAT startup
+2018-11-21 19:55:25,484 - app.errors - WARNING - 404
+2018-11-21 19:55:25,484 - app.errors - WARNING - 404
+2018-11-21 19:55:25,484 - app.errors - WARNING - 404
+2018-11-21 19:56:27,337 - app - INFO - MAT startup
+2018-11-21 19:56:30,702 - app.errors - WARNING - 404
+2018-11-21 19:56:39,218 - app - INFO - MAT startup
+2018-11-21 19:56:44,966 - app - INFO - MAT startup
+2018-11-21 19:57:15,157 - app - INFO - MAT startup
+2018-11-21 19:57:47,003 - app - INFO - MAT startup
+2018-11-21 19:58:00,383 - app - INFO - MAT startup
+2018-11-21 19:58:10,764 - app - INFO - MAT startup
+2018-11-21 19:58:11,597 - app - INFO - MAT startup
+2018-11-21 19:59:51,557 - app - INFO - MAT startup
+2018-11-21 20:00:05,995 - app - INFO - MAT startup
+2018-11-21 20:01:14,583 - app - INFO - MAT startup
+2018-11-21 20:01:26,580 - app - INFO - MAT startup
+2018-11-21 20:02:01,379 - app - INFO - MAT startup
+2018-11-21 20:02:14,823 - app - INFO - MAT startup
+2018-11-21 20:03:18,763 - app - INFO - MAT startup
+2018-11-21 20:21:17,486 - app - INFO - MAT startup
+2018-11-21 20:21:38,366 - app - INFO - MAT startup
+2018-11-22 10:48:18,216 - app - INFO - MAT startup
+2018-11-22 10:48:18,981 - app - INFO - MAT startup
+2018-11-22 10:48:24,409 - app.errors - WARNING - 404
+2018-11-22 10:49:01,252 - app - INFO - MAT startup
+2018-11-22 10:49:01,375 - app - INFO - MAT startup
+2018-11-22 10:49:01,375 - app - INFO - MAT startup
+2018-11-22 10:49:35,837 - app - INFO - MAT startup
+2018-11-22 10:49:35,837 - app - INFO - MAT startup
+2018-11-22 10:49:35,837 - app - INFO - MAT startup
+2018-11-22 10:55:19,182 - app - INFO - MAT startup
+2018-11-22 11:05:23,137 - app - INFO - MAT startup
+2018-11-22 11:05:23,137 - app - INFO - MAT startup
+2018-11-22 11:05:39,028 - app - INFO - MAT startup
+2018-11-22 11:30:56,819 - app - INFO - MAT startup
+2018-11-22 11:31:11,167 - app - INFO - MAT startup
+2018-11-22 11:31:23,833 - app - INFO - MAT startup
+2018-11-22 11:31:41,675 - app - INFO - MAT startup
+2018-11-22 11:31:53,671 - app - INFO - MAT startup
+2018-11-22 11:32:38,022 - app - INFO - MAT startup
+2018-11-22 11:33:07,034 - app - INFO - MAT startup
+2018-11-22 11:33:16,247 - app.errors - WARNING - 404
+2018-11-22 11:33:51,793 - app - INFO - MAT startup
+2018-11-22 11:34:08,129 - app - INFO - MAT startup
+2018-11-22 11:34:22,385 - app - INFO - MAT startup
+2018-11-22 11:34:39,983 - app - INFO - MAT startup
+2018-11-22 11:35:14,903 - app - INFO - MAT startup
+2018-11-22 11:35:33,867 - app - INFO - MAT startup
+2018-11-22 11:35:33,867 - app - INFO - MAT startup
+2018-11-22 11:35:51,045 - app - INFO - MAT startup
+2018-11-22 11:35:52,083 - app - INFO - MAT startup
+2018-11-22 11:36:25,204 - app - INFO - MAT startup
+2018-11-22 11:36:34,394 - app - INFO - MAT startup
+2018-11-22 11:36:56,217 - app - INFO - MAT startup
+2018-11-22 11:37:52,012 - app - INFO - MAT startup
+2018-11-22 11:39:41,021 - app - INFO - MAT startup
+2018-11-22 11:39:54,672 - app - INFO - MAT startup
+2018-11-22 11:40:30,033 - app - INFO - MAT startup
+2018-11-22 11:42:15,341 - app - INFO - MAT startup
+2018-11-22 11:42:53,365 - app - INFO - MAT startup
+2018-11-22 11:43:15,383 - app - INFO - MAT startup
+2018-11-22 11:45:06,388 - app - INFO - MAT startup
+2018-11-22 11:45:34,164 - app - INFO - MAT startup
+2018-11-22 11:47:47,773 - app - INFO - MAT startup
+2018-11-22 11:48:12,777 - app - INFO - MAT startup
+2018-11-22 11:48:18,385 - app - INFO - MAT startup
+2018-11-22 11:54:25,996 - app - INFO - MAT startup
+2018-11-22 11:54:38,182 - app - INFO - MAT startup
+2018-11-22 12:07:59,250 - app.errors - WARNING - 404
+2018-12-19 21:53:40,648 - app - INFO - MAT startup
+2018-12-19 21:53:41,310 - app - INFO - MAT startup
+2018-12-19 21:53:46,939 - app.errors - WARNING - 404
+2018-12-19 21:54:04,217 - app.errors - WARNING - 404
+2019-02-03 14:15:55,830 - app - INFO - MAT startup
+2019-02-03 14:15:56,618 - app - INFO - MAT startup
+2019-02-03 14:16:03,562 - app.errors - WARNING - 404
+2019-02-03 14:16:22,136 - app.errors - WARNING - 404
+2019-02-03 14:16:59,203 - app.errors - WARNING - 404
+2019-02-03 16:32:46,823 - app - INFO - MAT startup
+2019-02-03 19:39:59,156 - app - INFO - MAT startup
+2019-02-03 19:41:32,820 - app.errors - WARNING - 404
+2019-02-03 19:41:32,873 - app.errors - WARNING - 404
+2019-02-03 19:41:32,879 - app.errors - WARNING - 404
+2019-02-03 19:41:32,886 - app.errors - WARNING - 404
+2019-02-03 19:41:32,898 - app.errors - WARNING - 404
+2019-02-03 19:41:32,899 - app.errors - WARNING - 404
+2019-02-03 19:41:32,904 - app.errors - WARNING - 404
+2019-02-03 19:41:32,946 - app.errors - WARNING - 404
+2019-02-03 19:41:32,977 - app.errors - WARNING - 404
+2019-02-03 19:41:32,987 - app.errors - WARNING - 404
+2019-02-03 19:41:45,066 - app.errors - WARNING - 404
+2019-02-03 19:41:45,082 - app.errors - WARNING - 404
+2019-02-03 19:41:45,094 - app.errors - WARNING - 404
+2019-02-03 19:41:45,097 - app.errors - WARNING - 404
+2019-02-03 19:41:45,098 - app.errors - WARNING - 404
+2019-02-03 19:41:45,105 - app.errors - WARNING - 404
+2019-02-03 19:41:45,115 - app.errors - WARNING - 404
+2019-02-03 19:41:45,134 - app.errors - WARNING - 404
+2019-02-03 19:43:32,112 - app - INFO - MAT startup
+2019-02-03 19:47:43,924 - app - INFO - MAT startup
+2019-02-03 19:55:22,791 - app - INFO - MAT startup
+2019-02-03 19:56:41,292 - app - INFO - MAT startup
+2019-02-03 19:56:56,057 - app - INFO - MAT startup
+2019-02-03 19:56:57,721 - app - INFO - MAT startup
+2019-02-03 19:58:04,042 - app - INFO - MAT startup
+2019-02-03 19:58:05,579 - app - INFO - MAT startup
+2019-02-03 21:23:19,005 - app - INFO - MAT startup
+2019-02-03 21:23:26,985 - app - INFO - MAT startup
+2019-02-03 21:23:26,985 - app - INFO - MAT startup
+2019-02-03 21:24:27,472 - app - INFO - MAT startup
+2019-02-03 21:24:27,472 - app - INFO - MAT startup
+2019-02-03 21:24:27,472 - app - INFO - MAT startup
+2019-02-03 21:24:36,670 - app - INFO - MAT startup
+2019-02-03 21:24:36,670 - app - INFO - MAT startup
+2019-02-03 21:24:36,670 - app - INFO - MAT startup
+2019-02-03 21:24:36,670 - app - INFO - MAT startup
+2019-02-03 21:25:34,728 - app - INFO - MAT startup
+2019-02-03 21:25:54,723 - app - INFO - MAT startup
+2019-02-03 21:27:40,978 - app - INFO - MAT startup
+2019-02-03 21:28:08,844 - app - INFO - MAT startup
+2019-02-03 21:28:08,844 - app - INFO - MAT startup
+2019-02-03 21:41:42,243 - app - INFO - MAT startup
+2019-02-03 21:42:37,311 - app - INFO - MAT startup
+2019-02-03 21:44:16,826 - app - INFO - MAT startup
+2019-02-03 21:47:31,632 - app - INFO - MAT startup
+2019-02-03 21:51:01,853 - app - INFO - MAT startup
+2019-02-03 22:04:08,505 - app - INFO - MAT startup
+2019-02-04 19:37:36,414 - app - INFO - MAT startup
+2019-02-04 19:37:50,274 - app - INFO - MAT startup
+2019-02-04 19:37:58,921 - app - INFO - MAT startup
+2019-02-04 19:38:00,836 - app - INFO - MAT startup
+2019-02-04 19:38:03,230 - app.errors - WARNING - 404
+2019-02-14 10:50:20,111 - app - INFO - MAT startup
+2019-02-14 10:50:24,126 - app - INFO - MAT startup
+2019-02-14 10:51:37,916 - app - INFO - MAT startup
+2019-02-14 10:51:41,927 - app - INFO - MAT startup
+2019-02-14 10:52:43,763 - app - INFO - MAT startup
+2019-02-14 10:52:43,763 - app - INFO - MAT startup
+2019-02-14 10:52:45,189 - app.errors - WARNING - 404
+2019-02-14 10:52:45,189 - app.errors - WARNING - 404
+2019-02-14 10:54:16,864 - app - INFO - MAT startup
+2019-02-14 10:54:20,275 - app - INFO - MAT startup
+2019-02-14 12:08:07,215 - app - INFO - MAT startup
+2019-02-14 12:08:10,505 - app - INFO - MAT startup
+2019-02-14 15:28:54,706 - app.errors - WARNING - 404
+2019-02-14 15:30:15,138 - app - INFO - MAT startup
+2019-02-14 15:30:20,521 - app - INFO - MAT startup
+2019-02-15 08:34:29,419 - app - INFO - MAT startup
+2019-02-15 08:34:33,284 - app - INFO - MAT startup
+2019-02-15 08:34:37,890 - app.errors - WARNING - 404
+2019-02-15 11:16:24,584 - app - INFO - MAT startup
+2019-02-15 11:21:00,837 - app - INFO - MAT startup
+2019-02-15 11:21:00,837 - app - INFO - MAT startup
+2019-02-15 11:21:10,647 - app - INFO - MAT startup
+2019-02-15 11:21:12,803 - app - INFO - MAT startup
+2019-02-15 11:22:40,174 - app - INFO - MAT startup
+2019-02-15 11:22:40,218 - app - INFO - MAT startup
+2019-02-15 11:23:57,775 - app - INFO - MAT startup
+2019-02-15 11:23:57,775 - app - INFO - MAT startup
+2019-02-15 11:23:57,899 - app.errors - WARNING - 404
+2019-02-15 11:23:57,899 - app.errors - WARNING - 404
+2019-02-15 11:26:25,451 - app - INFO - MAT startup
+2019-02-15 11:26:27,951 - app - INFO - MAT startup
+2019-02-15 11:27:51,202 - app - INFO - MAT startup
+2019-02-15 11:32:55,274 - app - INFO - MAT startup
+2019-02-15 11:40:14,250 - app - INFO - MAT startup
+2019-02-15 11:40:16,894 - app - INFO - MAT startup
+2019-02-15 11:44:14,975 - app - INFO - MAT startup
+2019-02-15 11:44:28,457 - app - INFO - MAT startup
+2019-02-15 11:44:28,457 - app - INFO - MAT startup
+2019-02-15 11:44:34,108 - app.errors - WARNING - 404
+2019-02-15 11:44:34,108 - app.errors - WARNING - 404
+2019-02-15 11:44:37,697 - app.errors - WARNING - 404
+2019-02-15 11:44:37,697 - app.errors - WARNING - 404
+2019-02-15 11:45:02,885 - app - INFO - MAT startup
+2019-02-15 11:45:05,041 - app - INFO - MAT startup
+2019-02-15 11:45:45,780 - app - INFO - MAT startup
+2019-02-15 13:07:27,616 - app.routes - WARNING - Brugeren '444444444444444' fors�ger at logge ind, men fejler
+2019-02-17 15:26:02,135 - app - INFO - MAT startup
+2019-02-17 15:26:05,924 - app - INFO - MAT startup
+2019-02-17 15:28:08,112 - app - INFO - MAT startup
+2019-02-17 15:28:37,062 - app - INFO - MAT startup
+2019-02-17 15:28:39,895 - app - INFO - MAT startup
+2019-02-17 15:32:09,153 - app - INFO - MAT startup
+2019-02-17 15:32:11,530 - app - INFO - MAT startup
+2019-02-17 15:37:11,646 - app - INFO - MAT startup
+2019-02-17 15:37:11,786 - app - INFO - MAT startup
+2019-02-17 18:50:51,455 - app - INFO - MAT startup
+2019-02-17 18:50:54,241 - app - INFO - MAT startup
+2019-02-17 19:13:32,328 - app - INFO - MAT startup
+2019-02-17 19:13:35,077 - app - INFO - MAT startup
+2019-02-17 19:22:35,207 - app - INFO - MAT startup
+2019-02-17 19:23:51,849 - app.errors - WARNING - 404
+2019-02-17 19:23:54,351 - app.errors - WARNING - 404
+2019-02-17 19:24:13,422 - app - INFO - MAT startup
+2019-02-17 19:24:14,597 - app.errors - WARNING - 404
+2019-02-17 19:25:55,218 - app - INFO - MAT startup
+2019-02-17 19:25:58,035 - app - INFO - MAT startup
+2019-02-17 19:58:13,082 - app - INFO - MAT startup
+2019-02-17 19:58:13,371 - app - INFO - MAT startup
+2019-02-17 19:58:25,703 - app - INFO - MAT startup
+2019-02-17 19:58:26,457 - app - INFO - MAT startup
+2019-02-17 20:00:38,864 - app - INFO - MAT startup
+2019-02-17 20:00:39,088 - app - INFO - MAT startup
+2019-02-17 20:01:21,659 - app - INFO - MAT startup
+2019-02-17 20:01:21,663 - app - INFO - MAT startup
+2019-02-17 20:01:56,849 - app - INFO - MAT startup
+2019-02-17 20:01:57,718 - app - INFO - MAT startup
+2019-02-17 20:15:02,786 - app - INFO - MAT startup
+2019-02-17 20:15:03,391 - app - INFO - MAT startup
+2019-02-17 20:15:42,262 - app - INFO - MAT startup
+2019-02-17 20:15:42,415 - app - INFO - MAT startup
+2019-02-17 20:16:47,881 - app - INFO - MAT startup
+2019-02-17 20:16:48,036 - app - INFO - MAT startup
+2019-02-17 20:17:21,817 - app - INFO - MAT startup
+2019-02-17 20:17:21,817 - app - INFO - MAT startup
+2019-02-17 20:20:37,579 - app.errors - WARNING - 404
+2019-02-17 20:20:37,579 - app.errors - WARNING - 404
+2019-02-17 20:20:50,214 - app - INFO - MAT startup
+2019-02-17 20:20:57,284 - app - INFO - MAT startup
+2019-02-17 20:20:59,549 - app - INFO - MAT startup
+2019-02-17 22:30:02,976 - app - INFO - MAT startup
+2019-02-17 22:44:53,059 - app - INFO - MAT startup
+2019-02-17 22:45:00,575 - app - INFO - MAT startup
+2019-02-17 22:46:32,882 - app - INFO - MAT startup
+2019-02-17 22:49:00,045 - app - INFO - MAT startup
+2019-02-17 22:50:02,032 - app - INFO - MAT startup
+2019-02-17 22:50:19,679 - app - INFO - MAT startup
+2019-02-17 22:52:44,722 - app - INFO - MAT startup
+2019-02-17 22:53:08,461 - app - INFO - MAT startup
+2019-02-17 22:55:10,076 - app - INFO - MAT startup
+2019-02-17 22:55:41,497 - app - INFO - MAT startup
+2019-02-17 22:56:46,514 - app - INFO - MAT startup
+2019-02-17 22:57:06,009 - app - INFO - MAT startup
+2019-02-17 22:57:29,856 - app - INFO - MAT startup
+2019-02-17 22:57:54,595 - app - INFO - MAT startup
+2019-02-17 22:58:03,172 - app - INFO - MAT startup
+2019-02-17 23:19:11,205 - app - INFO - MAT startup
+2019-02-17 23:21:39,117 - app - INFO - MAT startup
+2019-02-18 10:08:42,551 - app - INFO - MAT startup
+2019-02-18 19:13:33,116 - app - INFO - MAT startup
+2019-02-18 19:13:46,989 - app - INFO - MAT startup
+2019-02-18 19:15:45,195 - app - INFO - MAT startup
+2019-02-18 19:16:30,308 - app - INFO - MAT startup
+2019-02-18 19:28:46,333 - app - INFO - MAT startup

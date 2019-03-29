@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="h-50 d-flex align-items-center bg-info" style="	background-image: url(../static/bg01.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1 text-center" style="background-position: left top; background-size: 100%; background-repeat: repeat;"><mark><span class="text-danger"><b>MAT</b></span> |&nbsp;Retteværktøj</mark></h1>
+          <p class="text-monospace text-center"><mark>Enkelt og gratis værktøj til evaluering af MAT prøver.</mark></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+  <div class="py-3" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <p class="lead text-center">{{ message }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+{% if current_user.is_anonymous %}
+  <div class="py-5" style="">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-md-4 bg-light" style="">
+
+          <h1 class="text-center">Allerede bruger?</h1>
+          <div class="row">
+            <div class="col-md-12 bg-light">
+              <form class="" action="{{ url_for('login') }}" method="post" onsubmit="submit.disabled = true; return true;">
+                {{ l_form.hidden_tag() }}
+
+                  <h4 class="text-center"><b>Log ind</b></h4>
+                <p>
+                  {{ l_form.username.label }}<br>
+                  {{ l_form.username(class_="form-control", placeholder="Indtast brugernavn") }}
+                  {% for error in l_form.username.errors %}
+                   <span style="color: #c00;">[{{ error }}]</span>
+                  {% endfor %}
+                </p>
+                <p>
+                  {{ l_form.password.label }}<br>
+                  {{ l_form.password(class_="form-control", placeholder="Indtast password") }}
+                  {% for error in l_form.password.errors %}
+                   <span style="color: #c00;">[{{ error }}]</span>
+                  {% endfor %}
+              </p>
+              <p>{{ l_form.remember_me() }} {{ l_form.remember_me.label }}<br>{{ l_form.submit_l(class="btn btn-primary") }}</p>
+              </form><br>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 bg-warning" style="">
+          <h1 class="text-center">Ny bruger?</h1>
+          <div class="row">
+            <div class="col-md-12 bg-warning" style="">
+    <form action="{{ url_for('register') }}" method="post" onsubmit="submit.disabled = true; return true;">
+        {{ form.hidden_tag() }}
+        <h4 class="text-center"><b>Oprettelse</b></h4>
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(class_="form-control", placeholder="Vælg brugernavn") }}
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(class_="form-control", placeholder="Indtast din email adresse") }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.school.label }}<br>
+            {{ form.school(class_="form-control") }}
+            {% for error in form.school.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(class_="form-control", placeholder="Vælg et kodeord") }}
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2(class_="form-control", placeholder="Gentag det valgte kodeord") }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(class="btn btn-primary") }}</p>
+    </form><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" style="">
+          <h1 class="text-center">Hvorfor oprette en bruger?</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="lead text-justify">Når du opretter dig som bruger får du fuld og ubegrænset adgang til retteværktøjet. Det er kun dig, der har adgang til de prøver du opretter.<br><br>Mine brugeroplysninger...?<br>
+Du skal indtaste din email adresse får at oprette dig, men den bruges kun i tilfælde af, at du mister dit kodeord. Du vil intet spam eller andet ligegyldigt modtage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+   <div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><h1 class="text-center">Velkommen</h1>
+          <h4 class="text-center"><b>{{ current_user.username }}</b><br></h4>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="lead text-justify"><br>Du er logget ind og klar til at bruge retteværktøjet. Gå til <a href="{{ url_for('user', username=current_user.username) }}">min side</a> eller brug menuen øverst for at oprette en MAT prøve.<br><br>Læs mere om hvad MAT | Retteværktøjet er nedenfor.<br><br></p><i class="far fa-arrow-alt-circle-down"></i></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  {% endif %}
+<div class="py-5 bg-warning" style="" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}

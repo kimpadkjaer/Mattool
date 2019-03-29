@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="py-5" style="	background-image: url(../static/bg02.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>MAT | Kontakt</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+  <div class="py-3" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <p class="lead text-center">{{ message }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+
+        <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Din feedback er vigtig!</h1>
+             <div class="py-5" >
+    <div class="container">
+      <div class="row">
+
+        <div class="px-lg-5 flex-column justify-content-center col-lg-6">
+                      <p class="lead" >Skriv!
+                          <br>
+                          <br>
+                      Ris, ros og andet modtages med kyshånd.
+                          <br>
+                          <br>
+                      Uden din feedback bliver retteværktøjet ikke bedre, så det er vigtigt for mig, at du tager dig tid til at sende mig en besked, hvis du har forslag til ændringer, forbedringer, tilføjelser, fejl eller noget helt femte.
+                      </p>
+        </div>
+        <div class="col-md-6 bg-warning rounded">
+           <br>                  <form id="c_form-h" action="" method="post" onsubmit="submit.disabled = true; return true;">
+                {{ form.hidden_tag() }}
+
+                <div class="form-group row">
+                  <div class="col-12"><p>Navn:</p>
+                    {{ form.navn(class_="form-control") }} </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-12"><p>Email:</p>
+                    {{ form.email(class_="form-control") }} </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-12"><p>Besked:</p>
+                    {{ form.besked(class_="form-control", rows="8")|safe }}</div>
+                </div>
+                {{ form.submit(class="btn btn-primary") }}
+                </form>
+<br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

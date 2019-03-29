@@ -1,0 +1,75 @@
+{% extends('base.html') %}
+
+{% block content %}
+    <div class="py-5" style="	background-image: url({{ random_bg }});	background-position: top left;	background-size: 100%;	background-repeat: no repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><mark>{{ current_user }}'s side</mark></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="py-5 bg-warning" style="" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <h1 class="">Velkommen {{ current_user.username }}</h1>
+          <p class="lead">Dit bruger ID er {{ current_user.id }}, din email adresse er {{ current_user.email }} og du kommer fra {{ current_user.school }}<br><br>Du er logget ind og klar til at bruge retteværktøjet.<br><br><a href="{{ url_for('edit_user') }}">Foretag ændringer af dine brugerprofil</a><br><br></p></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+{% if mat1_tests|length >= 1 %}
+    <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-left">Mine prøver</h1><br>
+
+          <p class="lead text-left">MAT1:<br></p>
+           <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr class="text-center">
+                  <th>Prøvens navn</th>
+                  <th>Klasse</th>
+                  <th>Oprettet</th>
+                  <th>Bemærkninger</th>
+                  <th>Slet prøve</th>
+                </tr>
+              </thead>
+              {% for each_test in mat1_tests %}
+              <tbody>
+                <tr class="text-center">
+                  <th><a href="{{ url_for('mat1_test_show', id=each_test.id) }}">{{ each_test.title }}</th>
+                  <td>{{ each_test.klasse }}</td>
+                  <td>{{ each_test.created_on.strftime("%d/%m/%Y") }}</td>
+                  <td>{{ each_test.beskrivelse }}</td>
+                  <td> <form action="{{ url_for('mat1_delete_test', mat1_id = each_test.id) }}" method="POST"><input type="submit" value="Slet test" class="btn btn-primary"></form></td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    {% else %}
+    <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <p class="lead text-center">Du har ikke oprettet nogen prøver endnu. Brug menuen øverst på siden eller vælg nedenfor.<br></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+    {% endif %}
+{% endblock %}
