@@ -3,7 +3,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
 
-    SECRET_KEY = 'xcdqtE3tbZJmY5B'
+    SECRET_KEY = ''
 
     SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="mattool",
